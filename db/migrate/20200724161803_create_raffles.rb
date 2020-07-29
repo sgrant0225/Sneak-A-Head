@@ -3,6 +3,8 @@ class CreateRaffles < ActiveRecord::Migration[6.0]
     create_table :raffles do |t|
       t.integer :size
       t.date :date
+      t.boolean :open
+    
 
       t.timestamps
     end

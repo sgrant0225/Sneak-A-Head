@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   get '/' => 'sessions#welcome'
-  get '/login' => 'sessions#new'
+  get '/login' => 'sessions#login'
   post 'login' => 'sessions#create'
+  get '/signup' => 'users#new'
+  post 'signup' => 'userscreate'
+  delete '/logout' => 'sessions#logout'
   resources :raffles
   resources :sneakers
   resources :users
