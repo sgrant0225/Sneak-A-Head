@@ -1,0 +1,10 @@
+<h2> Releases</h2>
+
+<ul>
+  <% @shoes.each.with_index(1) do |shoes_obj, idx| %>
+    <li><%= idx%>. <%= link_to shoes_obj.name, shoe_path(shoes_obj) %>
+    <br/> Release date: <%= shoes_obj.release_date %></li>
+    <br/>
+  <% end %>
+</ul>
+

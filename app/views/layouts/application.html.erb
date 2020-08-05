@@ -8,7 +8,14 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+  <div>
+   <% if session.has_key?(:user_id) %>
+      <%= link_to "Log Out", logout_path, method: :delete %>
+   <% else %>
+     <%= link_to "Log In", login_path %>
+     <%= link_to "Signup", signup_path %>
+   <% end %>
+  </div>
   <body>
     <%= yield %>
   </body>

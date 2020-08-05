@@ -20,12 +20,16 @@ class SessionsController < ApplicationController
     end
 
     def logout
-        session.delete[:user_id]
-        redirect_to '/'
+        session.clear
+        redirect_to login_path
+       
+        # session.delete
+        # redirect_to '/'
     end   
 
     private 
      def session_params 
-        params.require('session').permit(:email, :password)        
+        params.require('session').permit(:email, :password) 
+     end           
 end
 
