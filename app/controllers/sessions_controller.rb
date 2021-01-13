@@ -7,9 +7,9 @@ class SessionsController < ApplicationController
 
     def create
         #you should find the user in the DB first
-        @user = User.find_by(email: params[:user][:email])
+        @user = User.find_by(email: session_params[:email])
         #then validate password
-        if @user && @user.authenticate(params[:user][:password]) 
+        if @user && @user.authenticate(session_params[:password]) 
             session[:user_id] = @user.id
             #session[:email] = params[:email]
             redirect_to user_path(@user)
@@ -29,7 +29,7 @@ class SessionsController < ApplicationController
 
     private 
      def session_params 
-        params.require('session').permit(:email, :password) 
+        params.require(:user).permit(:email, :password) 
      end           
 end
 

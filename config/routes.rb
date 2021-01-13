@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#login'
   post 'login' => 'sessions#create'
   get '/signup' => 'users#new'
-  post 'signup' => 'userscreate'
+  post '/signup' => 'users#create'
   delete '/logout' => 'sessions#logout'
   get '/shoes' => 'shoes#index'
   resources :raffles
