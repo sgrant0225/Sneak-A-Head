@@ -10,26 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_29_225118) do
-
-  create_table "entries", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "address"
-    t.string "phone_number"
-    t.string "phone_type"
-    t.date "date_entered"
-    t.integer "user_id"
-    t.integer "raffle_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
+ActiveRecord::Schema.define(version: 2020_07_24_161803) do
 
   create_table "raffles", force: :cascade do |t|
     t.string "title"
     t.string "content"
     t.date "date"
     t.boolean "open"
+    t.integer "tickets"
     t.integer "user_id"
     t.integer "shoe_id"
     t.datetime "created_at", precision: 6, null: false
@@ -50,6 +38,9 @@ ActiveRecord::Schema.define(version: 2020_07_29_225118) do
     t.string "first_name"
     t.string "last_name"
     t.string "email"
+    t.string "address"
+    t.string "phone_number"
+    t.string "phone_type"
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

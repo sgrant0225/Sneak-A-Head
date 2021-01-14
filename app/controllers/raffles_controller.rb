@@ -1,7 +1,14 @@
 class RafflesController < ApplicationController
 
-    # def index
-    #   @raffles = Raffle.all 
-    #   #binding.pry
-    # end    
+    def index
+    end
+    
+    def show
+    end 
+    
+    def create 
+    end
+    
+    
+       
 end

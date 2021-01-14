@@ -8,6 +8,8 @@ class ShoesController < ApplicationController
     def show 
      shoe = Shoe.find_by(params[:name])
     end   
+
+    
     
     #has_many raffles
     #has_many :users, through: :raffles

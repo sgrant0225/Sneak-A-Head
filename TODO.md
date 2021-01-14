@@ -18,3 +18,6 @@ index page code needs to be fixed <% @shoes.each.with_index(1) do |shoes_obj, id
     <br/> Release date: <%= shoes_obj.release_date %></li>
     <br/>
   <% end %>
+
+  Added a branch called sneakahead_revised
+   and trying to merge it to the master branch

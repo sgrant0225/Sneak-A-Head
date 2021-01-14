@@ -5,6 +5,7 @@ class CreateRaffles < ActiveRecord::Migration[6.0]
       t.string :content
       t.date :date
       t.boolean :open
+      t.integer :tickets
       t.integer :user_id
       t.integer :shoe_id
 
