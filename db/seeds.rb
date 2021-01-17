@@ -36,17 +36,17 @@ Raffle.create!(
         content: "The Jordan 1 Retro High Satin Snake Chicago (W) is slated to release on August 6th. This women's exclusive AJ 1 will hit retailers' shelves for a sticker price of $170", 
         date: "August 06, 2020", 
         open: "false", 
-        tickets: "1"
-        user_id: user.id, 
-        shoe_id: shoe.id
+        tickets: "1",
+        user_id: "1", 
+        shoe_id: "1"
         },
    {    title: "Reebok Question Mid Eric Emanuel Pink Toe",
         content: "The Reebok Question Mid Eric Emanuel Pink Toe has finally arrived and is ready to hit shelves. The pair will touch down on July 31st at a retail price of $150",
         date: "July 31, 2020",
         open: "true",
-        tickets: "2"
-        user_id: user.id, 
-        shoe_id: shoe.id
+        tickets: "2",
+        user_id: "2",
+        shoe_id: "2"
        }]
        )
 
