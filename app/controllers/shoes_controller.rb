@@ -6,8 +6,10 @@ class ShoesController < ApplicationController
     end    
 
     def show 
-     shoe = Shoe.find_by(params[:name])
+     @shoe = Shoe.find_by(params[:id])
     end   
+
+   #shoes will only have an index and show page 
 
     
     

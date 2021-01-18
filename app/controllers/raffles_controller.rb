@@ -17,10 +17,11 @@ class RafflesController < ApplicationController
     end     
     
     def create 
-     @raffle = Raffle.new(raffle_params)
-      if @raffle.save
-        binding.pry
-       redirect_to raffle_path
+      @raffle = Raffle.new(raffle_params)
+      @raffle.user = current_user
+      #binding.pry
+      if @raffle.save!
+       redirect_to raffle_path(@raffle)
       else
         render :new
       end
@@ -30,7 +31,7 @@ class RafflesController < ApplicationController
     private
 
     def raffle_params
-     params.require(:raffle).permit(:title, user_attributes: [:first_name, :last_name, :email, :address, :phone_number, :phone_type])
+     params.require(:raffle).permit(user_attributes: [:first_name, :last_name, :email, :address, :phone_number, :phone_type])
     end    
     
        

@@ -25,7 +25,8 @@ index page code needs to be fixed <% @shoes.each.with_index(1) do |shoes_obj, id
    Forms
    - Where are your forms going to go? 
        Forms typically go in new and edit routes.  Your creating a NEW form or EDITING an existing form. 
-       
+       -Curently I have one submittable form. 
+       -
 
    Nested Form- 
     1. Where do I want implement my nested form?  

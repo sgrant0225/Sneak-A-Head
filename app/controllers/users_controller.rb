@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  helper_method current_user, logged_in?
 
     def new 
      @user = User.new
@@ -18,8 +19,12 @@ class UsersController < ApplicationController
         @user = User.find_by_id(params[:id])
     end    
     
-     private
+    
+    
+    private
        def user_params
         params.require(:user).permit(:first_name, :last_name, :email, :password)
-    end   
+       end   
+    
+
 end

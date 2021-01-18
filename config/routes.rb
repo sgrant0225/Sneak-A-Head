@@ -8,9 +8,10 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#logout'
   get '/shoes' => 'shoes#index'
   resources :raffles
-  resources :shoes
+  resources :shoes, only: [:index, :show]
   resources :users
   
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
+ 
