@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   post '/signup' => 'users#create'
   delete '/logout' => 'sessions#logout'
   get '/shoes' => 'shoes#index'
+  get '/auth/facebook/callback' => 'sessions#create'
   resources :raffles
   resources :shoes, only: [:index, :show]
   resources :users

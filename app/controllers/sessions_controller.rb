@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
     end    
 
     def create
+        byebug
         #you should find the user in the DB first
         @user = User.find_by(email: session_params[:email])
         #then validate password
@@ -30,6 +31,10 @@ class SessionsController < ApplicationController
     private 
      def session_params 
         params.require(:user).permit(:email, :password) 
-     end           
+     end        
+     
+     def auth
+      request.env['omniauth.auth']
+     end   
 end
 
