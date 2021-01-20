@@ -4,3 +4,5 @@
 
 <h1><%= @raffle.user.first_name %>You have entered the raffle successfully </h1>
 
+<%= link_to "Delete", @raffle, method: :delete, data: { confirm: "Really?" } %>
+
