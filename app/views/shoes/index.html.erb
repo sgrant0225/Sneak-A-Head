@@ -1,13 +1,24 @@
 <h2> Upcoming Releases</h2>
 
-<ul>
-  <% @shoes.each.with_index(1) do |shoes_obj, idx| %>
-    <li><%= idx%>. <%= link_to shoes_obj.name, shoe_path(shoes_obj) %>
-    <br/> Release date: <%= shoes_obj.release_date %>
-    Price: <%= shoes_obj.price %></li>
-    <br/>
-  <% end %>
-</ul>
+<% @shoes.each do |shoe| %>
+    <div class="shoe-card">
+        <div class="shoe-names">
+            <p><%= shoe.name %></p>
+        </div>
+        <div class="shoe-release_date">
+            <p><%= shoe.release_date %></p>
+        </div>
+        <div class="shoe-price">
+            <p><%= shoe.price %></p>
+        </div>
+        <div class="img">
+            <img src=<%=shoe.image%> width="300"
+         height="200">
+        </div>
+    </div>
+<% end %>
+
+
 
 <h2> <%= link_to "Enter Raffle", raffles_path(@raffle) %></h2>
 

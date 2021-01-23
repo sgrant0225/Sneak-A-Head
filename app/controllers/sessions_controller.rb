@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
       @user = User.new
     end   
 
-    def create
+    def create  
       #binding.pry
       if auth_hash != nil
           @user = User.find_or_create_from_auth_hash(auth_hash)
@@ -24,7 +24,7 @@ class SessionsController < ApplicationController
     end
     
     def login 
-      #@user = User.new
+      @user = User.new
     end 
     
     def new

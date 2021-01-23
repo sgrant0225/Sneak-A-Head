@@ -14,10 +14,7 @@ ActiveRecord::Schema.define(version: 2020_07_24_161803) do
 
   create_table "raffles", force: :cascade do |t|
     t.string "title"
-    t.string "content"
     t.date "date"
-    t.boolean "open"
-    t.integer "tickets"
     t.integer "user_id"
     t.integer "shoe_id"
     t.datetime "created_at", precision: 6, null: false
@@ -25,11 +22,10 @@ ActiveRecord::Schema.define(version: 2020_07_24_161803) do
   end
 
   create_table "shoes", force: :cascade do |t|
+    t.string "image"
     t.string "name"
-    t.string "brand"
-    t.integer "price"
-    t.string "product_detail"
     t.date "release_date"
+    t.string "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
