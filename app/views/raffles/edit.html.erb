@@ -1,1 +1,39 @@
-test
+<h1> Edit Page </h1>
+
+<h1> Enter Raffle </h1>
+
+    <%= form_for @raffle do |f| %>
+      <%= f.hidden_field :shoe_id %>
+   <div><%= f.collection_select :shoe_id, Shoe.all, :id, :name, prompt: true %></div> <br></br>
+        <%= f.label :size %>
+        <%= f.number_field :size, min: 5 %>
+           <br></br>
+           
+        <%= f.fields_for :user do |u| %>
+          <%= u.label :first_name %>
+          <%= u.text_field :first_name %>
+          <br></br>
+       
+          <%= u.label :last_name %>
+          <%= u.text_field :last_name %>
+          <br></br>
+       
+          <%= u.label :email %>
+          <%= u.text_field :email%>
+          <br></br>
+       
+          <%= u.label :address %>
+          <%= u.text_field :address %>
+          <br></br>
+       
+          <%= u.label :phone_number %>
+          <%= u.telephone_field :phone_number %>
+          <br></br>
+
+          <%= u.label :phone_type %>
+          <%= u.text_field :phone_type %>
+          <br></br>
+        <% end %>
+
+        <%= f.submit %>
+      <% end %>

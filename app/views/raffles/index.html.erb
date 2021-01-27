@@ -1,4 +1,10 @@
 
 
-<h1>Listing of Raffles</h1>
-   
+<h1>Your Raffles</h1>
+
+<% @raffles.each do |raffle|%>
+  <div>
+    <h3><%= link_to raffle.shoe.name, raffle_path(raffle) %> </h3>
+    Size: <%= raffle.size %>  </p>
+  </div><br>
+<% end %>

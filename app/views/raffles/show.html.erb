@@ -8,10 +8,9 @@
        height="200">
   </div>
 
-  <%= @raffle.shoe.price %>
+  <%= @raffle.shoe.price %> <br></br>
 
-
+<%= link_to "Edit Raffle", edit_raffle_path(@raffle) %>
  <%#= link_to "Delete", @raffle_path(@raffle), method: :delete, data: { confirm: "Really?" } %>
 
 
-<h4>For <%= @raffle.user.first_name%> </h4>

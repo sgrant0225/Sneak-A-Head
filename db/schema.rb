@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 2020_07_24_161803) do
 
   create_table "raffles", force: :cascade do |t|
     t.string "title"
+    t.integer "size"
     t.date "date"
     t.integer "user_id"
     t.integer "shoe_id"
