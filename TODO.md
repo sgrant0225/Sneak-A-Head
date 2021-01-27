@@ -34,3 +34,11 @@ index page code needs to be fixed <% @shoes.each.with_index(1) do |shoes_obj, id
    -However, I think I want to have a link in the show page with enter raffle for that particular shoe.  Where is displays a single page of the show you want to enter the raffle for. 
 
    - The shoe index page listed all the shoes in the site that you enter raffles for.  
+
+   Routes
+   Include nested resource show or index 
+
+   Scope methods-
+    Where does it make sense to scope?  
+    -Scope methods goes to in the model files
+    

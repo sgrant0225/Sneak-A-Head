@@ -1,8 +1,17 @@
-<h1> This the raffle show page </h1>
+<%= link_to "Home", user_path(@raffle.user_id) %>
 
-<h1> This page is going to be revised after logic is completed </h1> 
+    <h2> You have entered the raffle successfully for: </h2>
 
-<h1><%= @raffle.user.first_name %>You have entered the raffle successfully </h1>
+  <p><%= @raffle.shoe.name %></p>
+  <div class="img">
+    <img src=<%=@raffle.shoe.image%> width="300" 
+       height="200">
+  </div>
 
-<%= link_to "Delete", @raffle, method: :delete, data: { confirm: "Really?" } %>
+  <%= @raffle.shoe.price %>
 
+
+ <%#= link_to "Delete", @raffle_path(@raffle), method: :delete, data: { confirm: "Really?" } %>
+
+
+<h4>For <%= @raffle.user.first_name%> </h4>

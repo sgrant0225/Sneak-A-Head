@@ -1,6 +1,10 @@
 <h2> Upcoming Releases</h2>
 
 <% @shoes.each do |shoe| %>
+    <div class="img">
+        <img src=<%=shoe.image%> width="300"
+         height="200">
+        </div>
     <div class="shoe-card">
         <div class="shoe-names">
             <p><%= shoe.name %></p>
@@ -11,14 +15,12 @@
         <div class="shoe-price">
             <p><%= shoe.price %></p>
         </div>
-        <div class="img">
-            <img src=<%=shoe.image%> width="300"
-         height="200">
-        </div>
+        <%=link_to "Enter Draw", new_shoe_raffle_path(shoe, shoe.raffles) %>
     </div>
+    
 <% end %>
 
 
 
-<h2> <%= link_to "Enter Raffle", raffles_path(@raffle) %></h2>
+
 

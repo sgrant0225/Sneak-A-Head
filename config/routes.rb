@@ -10,9 +10,13 @@ Rails.application.routes.draw do
   delete '/logout' => 'sessions#logout'
   get '/shoes' => 'shoes#index'
   get '/auth/facebook/callback' => 'sessions#create'
-  resources :raffles
-  resources :shoes, only: [:index, :show]
-  resources :users, only: :show
+  
+  resources :users, only: [:show] 
+  resources :raffles 
+  resources :shoes, only: [:index, :show] do 
+  resources :raffles, only: [:show, :index, :new]
+  end
+  
   
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

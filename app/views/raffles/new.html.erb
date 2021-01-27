@@ -1,8 +1,9 @@
 <h1> Enter Raffle </h1>
-      <%= @raffle.shoe %>
 
     <%= form_for @raffle do |f| %>
-       
+      <%= f.hidden_field :shoe_id %>
+   <div><%= f.collection_select :shoe_id, Shoe.all, :id, :name, prompt: true %></div>
+        
         <%= f.fields_for :user do |u| %>
           <%= u.label :first_name %>
           <%= u.text_field :first_name %>
