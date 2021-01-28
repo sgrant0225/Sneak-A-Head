@@ -10,7 +10,7 @@
 
   <%= @raffle.shoe.price %> <br></br>
 
-<%= link_to "Edit Raffle", edit_raffle_path(@raffle) %>
- <%#= link_to "Delete", @raffle_path(@raffle), method: :delete, data: { confirm: "Really?" } %>
+<%= link_to "Edit Raffle", edit_raffle_path(@raffle) %> <br></br>
+<%= link_to "Delete", raffle_path(@raffle), method: :delete, data: { confirm: "Really?" } %>
 
 

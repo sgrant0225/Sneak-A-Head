@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show] 
   resources :raffles 
   resources :shoes, only: [:index, :show] do 
-  resources :raffles, only: [:show, :index, :new]
+  resources :raffles, only: [:show, :index, :new, :edit]
   end
   
   

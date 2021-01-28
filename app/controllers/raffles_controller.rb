@@ -36,7 +36,8 @@ class RafflesController < ApplicationController
 
     def update 
       @raffle = Raffle.find_by(id: params[:id])
-      if @raffle.update(raffle_params)
+       if @raffle.user = current_user
+         @raffle.update(raffle_params)
           redirect_to raffle_path(@raffle)
       else
         render :edit 
