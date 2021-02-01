@@ -1,3 +1,107 @@
 // Place all the styles related to the session controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.u-section-1 {
+    background-image: url("images/pexelsphoto2272752.jpg");
+    background-position: 50% 100%;
+  }
+  
+  .u-section-1 .u-sheet-1 {
+    min-height: 629px;
+  }
+  
+  .u-section-1 .u-text-1 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 4.5rem;
+    margin: 412px 20px 60px;
+  }
+  
+  @media (max-width: 1199px) {
+    .u-section-1 .u-sheet-1 {
+      min-height: 659px;
+    }
+  
+    .u-section-1 .u-text-1 {
+      margin-top: -186px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .u-section-1 .u-sheet-1 {
+      min-height: 467px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .u-section-1 .u-sheet-1 {
+      min-height: 581px;
+    }
+  
+    .u-section-1 .u-text-1 {
+      font-size: 6rem;
+      margin-top: -301px;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    .u-section-1 .u-sheet-1 {
+      min-height: 500px;
+    }
+  
+    .u-section-1 .u-text-1 {
+      font-size: 4.5rem;
+      margin-top: -126px;
+    }
+  }.u-section-2 {
+    background-image: none;
+  }
+  
+  .u-section-2 .u-sheet-1 {
+    min-height: 800px;
+  }
+  
+  .u-section-2 .u-text-1 {
+    margin: 274px auto 0;
+  }
+  
+  .u-section-2 .u-text-2 {
+    margin: 30px auto 0;
+  }
+  
+  .u-section-2 .u-btn-1 {
+    border-style: solid;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 40px auto 60px;
+  }
+  
+  @media (max-width: 1199px) {
+    .u-section-2 .u-sheet-1 {
+      min-height: 660px;
+    }
+  
+    .u-section-2 .u-text-1 {
+      font-weight: normal;
+    }
+  }
+  
+  @media (max-width: 991px) {
+    .u-section-2 .u-sheet-1 {
+      min-height: 506px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .u-section-2 .u-sheet-1 {
+      min-height: 380px;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    .u-section-2 .u-sheet-1 {
+      min-height: 239px;
+    }
+  }

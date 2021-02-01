@@ -46,7 +46,7 @@ class RafflesController < ApplicationController
      
     def destroy
       @raffle = Raffle.find(params[:id]).destroy
-       redirect_to raffle_path(@raffle)
+       redirect_to raffles_path
     end  
 
 
